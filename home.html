@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tells the browser to support nearly every character symbol -->
+    <meta charset=""UTF-8" />
+    <!-- viewport displays layout properly in mobile; set to device"s screen width rather than desktop size, sets initial zoom to 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Browser tab name -->
+    <title>Teri Sky</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- MOBILE TOPBAR: Logo + hamburger menu side by side -->
+    <div class="mobile-topbar">
+      <div class="logo">Logo here</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- Gray transparent OVERLAY when hamburger menu is in use -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="layout">
+      <!-- LEFT SIDEBAR NAV -->
+      <nav class="sidebar" id="sidebar">
+        <!-- Logo shown on desktop only; hidden on mobile -->
+        <div class="logo">Logo here</div>
+        
+        <ul>
+          <li><a href="#" class="nav-link">Gallery</a></li>
+        </ul>
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    
+    </div>
+  </body>
+</html>
