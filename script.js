@@ -67,19 +67,21 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
 });
 
 // RIGHT-CLICK POPUP
-document.querySelectorAll("img").forEach(img => {
+document.querySelectorAll(".masonry-item img").forEach(img => {
   img.addEventListener("contextmenu", e => {
     e.preventDefault();
 
-    popup.style.left = e.pageX + 10 + "px";
-    popup.style.top  = e.pageY + 10 + "px";
+    // popup.style.left = e.pageX + 10 + "px";
+    // popup.style.top  = e.pageY + 10 + "px";
+    popup.style.left = e.clientX + 10 + "px";
+    popup.style.top  = e.clientY + 10 + "px";
 
     popup.classList.add("visible");
 
     clearTimeout(hideTimer);
     hideTimer = setTimeout(() => {
       popup.classList.remove("visible");
-    }, 2500);
+    }, 5000);
   });
 });
 

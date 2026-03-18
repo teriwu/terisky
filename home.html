@@ -14,10 +14,6 @@
   </head>
   
   <body>
-    <!-- Copyright popup -->
-    <div class="copyright-popup" id="copyright-popup">
-      © 2026 Teri Sky. All rights reserved.
-    </div>
     <!-- MOBILE TOPBAR: Logo + hamburger menu side by side -->
     <div class="mobile-topbar">
       <div class="logo">
@@ -56,7 +52,6 @@
       <!-- LEFT SIDEBAR NAV -->
       <nav class="sidebar" id="sidebar">
 
-        <!-- Logo shown on desktop only; hidden on mobile -->
         <div class="logo">
           <svg width="30" height="30" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <g id="_1225-C" serif:id="1225 C">
@@ -115,7 +110,6 @@
         <footer>
           <p>© 2026 Teri Sky</p>
           <p>✨</p>
-          <!-- <p>‧₊˚✧</p> -->
         </footer>
 
       </nav>
@@ -125,33 +119,46 @@
         <!-- PORTFOLIO CARDS -->
         <section class="cards-section">
           <!-- <h2>Portfolio</h2> -->
-          <div class="masonry">
-            <div class="masonry-item">
+          <ul class="masonry">
+            <li class="masonry-item"> <!-- Sunrise Latte -->
               <img src="images/Sunrise Latte 800 px.png" alt="Sunrise Latte" class="lightbox-trigger" data-src="images/Sunrise Latte 800 px.png" />
-            </div>
-            <div class="masonry-item">
+            </li>
+            <li class="masonry-item"> <!-- Chanko Nabe -->
               <img src="images/Chanko Nabe 1000 px.png" alt="Chanko Nabe" class="lightbox-trigger" data-src="images/Chanko Nabe 1000 px.png" />
-            </div>
-            <div class="masonry-item">
-              <img src="images/Mushrooms 800 px.png" alt="Mushrooms" class="lightbox-trigger" data-src="images/Mushrooms 800 px.png" />
-            </div>
-            <div class="masonry-item">
-              <img src="images/Melancholic 800 px PE.png" alt="Melancholic" class="lightbox-trigger" data-src="images/Melancholic 800 px PE.png/" />
-            </div>
-            <div class="masonry-item">
+            </li>
+            <li class="masonry-item"> <!-- Space Groove Pudding -->
               <img src="images/Space Groove Pudding 1000 px.png" alt="Space Groove Pudding" class="lightbox-trigger" data-src="images/Space Groove Pudding 1000 px.png" />
-            </div>
-          </div>
+            </li>
+            <li class="masonry-item"> <!-- Mushrooms -->
+              <img src="images/Mushrooms 800 px.png" alt="Mushrooms" class="lightbox-trigger" data-src="images/Mushrooms 800 px.png" />
+            </li>
+            <li class="masonry-item"> <!-- Melancholic -->
+              <img src="images/Melancholic 800 px PE.png" alt="Melancholic" class="lightbox-trigger" data-src="images/Melancholic 800 px PE.png/" />
+            </li>
+            <li class="masonry-item wide"> <!-- Cloud Ramens -->
+              <img src="images/Cloud Ramens 1080 px.png" alt="Cloud Ramens" class="lightbox-trigger" data-src="images/Cloud Ramens 1080 px.png" />
+            </li>
+            <li class="masonry-item wide"> <!-- Mango Pudding -->
+              <img src="images/Mango Pudding 800 px.png" alt="Mango Pudding" class="lightbox-trigger" data-src="images/Mango Pudding 800 px.png" />
+            </li>
+            <li class="masonry-item wide"> <!-- Onigiri -->
+              <img src="images/Onigiri 800 px.png" alt="Onigiri" class="lightbox-trigger" data-src="images/Onigiri 800 px.png" />
+            </li>
+            <li class="masonry-item wide"> <!-- Cup Noodles -->
+              <img src="images/Cup Noodles 1080 px.png" alt="Cup Noodles" class="lightbox-trigger" data-src="images/Cup Noodles 1080 px.png" />
+            </li>
 
-          <!-- Lightbox overlay — add this once, outside the masonry section -->
+          </ul>
+
+          <!-- LIGHTBOX -->
           <div class="lightbox" id="lightbox">
             <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
             <img class="lightbox-img" id="lightbox-img" src="" alt="" />
           </div>
-
-          <div class="copyright-popup" id="copyright-popup">
+          <!-- COPYRIGHT POPUP -->
+          <!-- <div class="copyright-popup" id="copyright-popup">
             This image is Copyright © 2026 Teri Sky. All rights reserved.
-          </div>
+          </div> -->
 
         </section>
 
