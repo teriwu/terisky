@@ -356,6 +356,10 @@ footer {
 
   /* Content takes full width */
   .content { margin-left: 0; }
+
+  .masonry {
+    columns: 2;
+  }
 }
 
 /* SVG social media icons */
