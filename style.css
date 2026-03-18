@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Frankfurter";
+  src: url("fonts/FrankfurterMedium\ Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.logo {
+  font-family: "Frankfurter", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -38,12 +54,12 @@ body {
 .sidebar .logo {
   font-size: 1.6rem;
   font-weight: 900;
-  font-style: italic;
+  font-style: normal;
   color: #111;
   text-transform: uppercase;
   border-bottom: 3px solid #e8a020;
   padding-bottom: 0.4rem;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .sidebar ul {
@@ -243,12 +259,12 @@ footer {
   .mobile-topbar .logo {
     font-size: 1.5rem;
     font-weight: 900;
-    font-style: italic;
+    font-style: normal;
     color: #111;
     text-transform: uppercase;
     border-bottom: 3px solid #e8a020;
-    padding-bottom: 0.2rem;
-    line-height: 1;
+    padding-bottom: 0.4rem;
+    /* line-height: 1; */
   }
 
   /* Hide the sidebar logo on mobile (shown in topbar instead) */
@@ -288,4 +304,28 @@ footer {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+}
+
+/* Disable mouse interaction */
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.copyright-popup {
+  position: fixed;
+  background: #2c3e50;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.copyright-popup.visible {
+  opacity: 1;
 }
