@@ -336,8 +336,8 @@ footer {
     /* line-height: 1; */
   }
 
-  /* Hide the sidebar logo on mobile (shown in topbar instead) */
-  .sidebar .logo { display: none; }
+  /*⚠️ Hide the sidebar logo on mobile (shown in topbar instead) ⚠️*/
+  /* .sidebar .logo { display: none; } */
 
   /* Sidebar slides in from left */
   .sidebar {
@@ -373,6 +373,10 @@ footer {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+}
+
+.sidebar-header .social-links {
+  display: flex;
 }
 
 /* Disable mouse interaction */
