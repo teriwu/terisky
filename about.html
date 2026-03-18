@@ -1,9 +1,134 @@
-<body>
-
-  <section class="hero">
-    <h1>work in progress</h1>
-    
-    <p>Return to <a href="/home.html">Gallery</a>.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Tells the browser to support nearly every character symbol -->
+    <meta charset="UTF-8" />
+    <!-- viewport displays layout properly in mobile; set to device"s screen width rather than desktop size, sets initial zoom to 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Browser tab name -->
+    <title>Teri Sky</title>
+    <link rel="icon" type="image/x-icon" href="other-images/teri-logo.svg">
+    <!-- Older browser support -->
+    <link rel="icon" type="image/png" href="other-images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
   
-  </section>
-</body>
+  <body>
+    <!-- MOBILE TOPBAR: Logo + hamburger menu side by side -->
+    <div class="mobile-topbar">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+          <g id="_1225-C" serif:id="1225 C">
+            <path id="Outer" d="M200,27.331C200,12.247 187.753,0 172.669,0L27.331,0C12.247,0 0,12.247 0,27.331L0,172.669C0,187.753 12.247,200 27.331,200L172.669,200C187.753,200 200,187.753 200,172.669L200,27.331ZM185,38.231C185,20.142 179.858,15 161.769,15L38.231,15C20.669,15 15,20.669 15,38.231L15,161.769C15,179.858 20.142,185 38.231,185L161.769,185C179.683,185 185,179.683 185,161.769L185,38.231Z" />
+            <g id="_4" serif:id="4" transform="matrix(1.83401e-17,0.299517,-1.17096,7.17008e-17,137.178,92.1341)">
+                <path d="M147,61.5C147,56.809 132.11,53 113.769,53L84.231,53C65.89,53 51,56.809 51,61.5C51,66.191 65.89,70 84.231,70L113.769,70C132.11,70 147,66.191 147,61.5Z" />
+            </g>
+            <g id="_3" serif:id="3" transform="matrix(5.71366e-17,0.933111,-1.43118,8.76343e-17,188.017,27.3602)">
+                <path d="M109.074,53L64.037,53C60.778,53 56.974,53.479 54.967,56.617C53.197,59.386 51.528,66.478 56.089,68.224C58.624,69.195 61.322,70 64.037,70L109.074,70C118.568,70.087 123.522,75.523 124.129,76.257C126.245,78.816 130.256,85.355 138.69,83.576C145.069,82.23 146.822,74.582 142.944,68.224C136.539,57.719 126.155,52.924 109.074,53Z" />
+            </g>
+            <g id="_2" serif:id="2" transform="matrix(1.22111,0,0,1.43118,-20.8897,-0.90354)">
+                <path d="M147,61.5C147,56.809 142.536,53 137.038,53L60.962,53C55.464,53 51,56.809 51,61.5C51,66.191 55.464,70 60.962,70L137.038,70C142.536,70 147,66.191 147,61.5Z" />
+            </g>
+            <g id="_1" serif:id="1" transform="matrix(0.933111,0,0,1.43118,7.62199,-38.5045)">
+                <path d="M147,61.5C147,56.809 141.158,53 133.963,53L64.037,53C56.842,53 51,56.809 51,61.5C51,66.191 56.842,70 64.037,70L133.963,70C141.158,70 147,66.191 147,61.5Z" />
+            </g>
+          </g>
+        </svg>
+        Teri Sky
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- OVERLAY when hamburger menu is in use -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="layout">
+
+      <!-- LEFT SIDEBAR NAV -->
+      <nav class="sidebar" id="sidebar">
+
+        <div class="logo">
+          <svg width="30" height="30" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+            <g id="_1225-C" serif:id="1225 C">
+              <path id="Outer" d="M200,27.331C200,12.247 187.753,0 172.669,0L27.331,0C12.247,0 0,12.247 0,27.331L0,172.669C0,187.753 12.247,200 27.331,200L172.669,200C187.753,200 200,187.753 200,172.669L200,27.331ZM185,38.231C185,20.142 179.858,15 161.769,15L38.231,15C20.669,15 15,20.669 15,38.231L15,161.769C15,179.858 20.142,185 38.231,185L161.769,185C179.683,185 185,179.683 185,161.769L185,38.231Z" />
+              <g id="_4" serif:id="4" transform="matrix(1.83401e-17,0.299517,-1.17096,7.17008e-17,137.178,92.1341)">
+                  <path d="M147,61.5C147,56.809 132.11,53 113.769,53L84.231,53C65.89,53 51,56.809 51,61.5C51,66.191 65.89,70 84.231,70L113.769,70C132.11,70 147,66.191 147,61.5Z" />
+              </g>
+              <g id="_3" serif:id="3" transform="matrix(5.71366e-17,0.933111,-1.43118,8.76343e-17,188.017,27.3602)">
+                  <path d="M109.074,53L64.037,53C60.778,53 56.974,53.479 54.967,56.617C53.197,59.386 51.528,66.478 56.089,68.224C58.624,69.195 61.322,70 64.037,70L109.074,70C118.568,70.087 123.522,75.523 124.129,76.257C126.245,78.816 130.256,85.355 138.69,83.576C145.069,82.23 146.822,74.582 142.944,68.224C136.539,57.719 126.155,52.924 109.074,53Z" />
+              </g>
+              <g id="_2" serif:id="2" transform="matrix(1.22111,0,0,1.43118,-20.8897,-0.90354)">
+                  <path d="M147,61.5C147,56.809 142.536,53 137.038,53L60.962,53C55.464,53 51,56.809 51,61.5C51,66.191 55.464,70 60.962,70L137.038,70C142.536,70 147,66.191 147,61.5Z" />
+              </g>
+              <g id="_1" serif:id="1" transform="matrix(0.933111,0,0,1.43118,7.62199,-38.5045)">
+                  <path d="M147,61.5C147,56.809 141.158,53 133.963,53L64.037,53C56.842,53 51,56.809 51,61.5C51,66.191 56.842,70 64.037,70L133.963,70C141.158,70 147,66.191 147,61.5Z" />
+              </g>
+            </g>
+          </svg>
+          Teri Sky
+        </div>
+
+        <!-- SOCIALS -->
+        <div class="social-links">
+          <a href="https://instagram.com/teriskyart" class="social-link" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/teriskyart" class="social-link" target="_blank" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="https://ko-fi.com/teri" class="social-link" target="_blank" aria-label="Ko-fi">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 2.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
+            </svg>
+          </a>
+          <a href="https://bsky.app/profile/terisky" class="social-link" target="_blank" aria-label="Bluesky">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.299-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- PAGES -->
+        <ul>
+          <li><a href="/" class="nav-link">✦ Gallery</a></li>
+          <li><a href="/about.html" class="nav-link">✦ About</a></li>
+          <li><a href="https://ko-fi.com/teri/shop" class="nav-link" target="_blank"><strong>✦ Store (Ko-fi)</strong></a></li>
+        </ul>
+        
+        <!-- SIDEBAR FOOTER -->
+        <footer>
+          <p>© 2026 Teri Sky</p>
+          <p>✨</p>
+        </footer>
+
+      </nav>
+      
+      <!-- MAIN CONTENT -->
+      <main class="content">
+        <section class="about-section" id="about">
+          <div class="about-inner">
+            <img src="gallery/melancholic.png" alt="Melancholic" class="about-img" />
+            <div class="about-text">
+              <h2>About Me</h2>
+              <p>Write something about yourself here. This could be a short bio, your artistic background, what inspires you, or what kind of work you do.</p>
+              <p>You can add as many paragraphs as you like.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
