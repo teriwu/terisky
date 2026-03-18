@@ -37,7 +37,7 @@ body {
 .sidebar {
   width: 220px;
   min-height: 100vh;
-  /* background: #faf8f2; */
+  background: #faf8f2;
   /* border-right: 1px solid #e8e4d9; */
   padding: 2rem 1.5rem;
   position: fixed;
@@ -91,9 +91,10 @@ body {
 /* DROPDOWN TOGGLE ARROW */
 .dropdown-toggle::before {
   /* the space after > in content: "❯ " did not work, added margin-right */
-  content: "❯";
-  font-size: 0.7rem;
-  color: #aaa;
+  /* content: "❯"; */
+  content: "✦";
+  /* font-size: 0.7rem; */
+  /* color: #aaa; */
   display: inline-block;
   margin-right: 0.4rem;
   transition: transform 0.2s;
@@ -157,7 +158,7 @@ body {
 .hero button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
 /* CARDS */
-.cards-section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+/* .cards-section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
 .cards-section h2 { margin-bottom: 2rem; font-size: 1.8rem; text-align: center; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
 .card {
@@ -170,7 +171,75 @@ body {
 .card:hover { transform: translateY(-4px); }
 .card .icon { font-size: 2rem; margin-bottom: 0.8rem; }
 .card h3 { margin-bottom: 0.5rem; }
-.card p { color: #666; font-size: 0.95rem; line-height: 1.5; }
+.card p { color: #666; font-size: 0.95rem; line-height: 1.5; } */
+
+/* MASONRY GRID Pinterest-style staggered look */
+.masonry {
+  columns: 3 220px;
+  column-gap: 0.8rem;
+  padding: 2rem 0.8rem ;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 0.8rem;
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+
+.masonry-item img:hover {
+  opacity: 0.85;
+}
+
+/* LIGHTBOX OVERLAY */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 500;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover {
+  opacity: 0.7;
+}
+
+/* Cursor pointer on hover for images */
+.lightbox-trigger {
+  cursor: zoom-in;
+}
 
 /* CONTACT */
 .contact { background: white; padding: 4rem 2rem; text-align: center; }
@@ -249,7 +318,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.2rem;
-    /* background: #faf8f2; */
+    background: #faf8f2;
     /* border-bottom: 1px solid #e8e4d9; */
     position: sticky;
     top: 0;
@@ -308,7 +377,7 @@ footer {
 
 /* Disable mouse interaction */
 img {
-  pointer-events: none;
+  /* pointer-events: none; */
   user-select: none;
 }
 

@@ -3,6 +3,11 @@ const sidebar          = document.getElementById("sidebar");
 const overlay          = document.getElementById("overlay");
 const projectsToggle   = document.getElementById("projects-toggle");
 const projectsDropdown = document.getElementById("projects-dropdown");
+const popup = document.getElementById("copyright-popup");
+let hideTimer;
+const lightbox      = document.getElementById("lightbox");
+const lightboxImg   = document.getElementById("lightbox-img");
+const lightboxClose = document.getElementById("lightbox-close");
 
 // ── Hamburger: open/close sidebar ──
 function toggleMenu() {
@@ -60,3 +65,49 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     `Thanks, ${name}! Your message has been received. ✅`;
   this.reset();
 });
+
+// RIGHT-CLICK POPUP
+document.querySelectorAll("img").forEach(img => {
+  img.addEventListener("contextmenu", e => {
+    e.preventDefault();
+
+    popup.style.left = e.pageX + 10 + "px";
+    popup.style.top  = e.pageY + 10 + "px";
+
+    popup.classList.add("visible");
+
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      popup.classList.remove("visible");
+    }, 2500);
+  });
+});
+
+// Open lightbox when an image is clicked
+document.querySelectorAll(".lightbox-trigger").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.getAttribute("data-src");
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden"; // prevent background scrolling
+  });
+});
+
+// Close on X button
+lightboxClose.addEventListener("click", closeLightbox);
+
+// Close on clicking outside the image
+lightbox.addEventListener("click", e => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Close on pressing Escape key
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeLightbox();
+});
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightboxImg.src = "";
+  document.body.style.overflow = ""; // restore scrolling
+}
