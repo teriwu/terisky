@@ -6,15 +6,16 @@
   font-display: swap;
 }
 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 .logo {
   font-family: "Frankfurter", sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   letter-spacing: 0.1rem;
+  color: #333;
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: "Segoe UI", sans-serif;
@@ -55,9 +56,9 @@ body {
   font-size: 1.6rem;
   font-weight: 900;
   font-style: normal;
-  color: #111;
+  color: #333;
   text-transform: uppercase;
-  border-bottom: 3px solid #e8a020;
+  border-bottom: 3px solid #ffad39;
   padding-bottom: 0.4rem;
   /* display: inline-block; */
 }
@@ -86,7 +87,7 @@ body {
 }
 
 .sidebar > ul > li > a:hover,
-.sidebar > ul > li > button.dropdown-toggle:hover { color: #e8a020; }
+.sidebar > ul > li > button.dropdown-toggle:hover { color: #ffad39; }
 
 /* DROPDOWN TOGGLE ARROW */
 .dropdown-toggle::before {
@@ -117,7 +118,7 @@ body {
 
 .dropdown li a {
   text-decoration: none;
-  color: #e8a020;
+  color: #ffad39;
   font-size: 0.9rem;
   display: block;
   padding: 0.2rem 0;
@@ -316,7 +317,7 @@ footer {
 
 /* SVG social media icons */
 .social-link {
-  color: #e8a020;
+  color: #ffad39;
   display: inline-block;
   line-height: 0;
   transition: opacity 0.2s;
@@ -412,9 +413,9 @@ footer {
     font-size: 1.5rem;
     font-weight: 900;
     font-style: normal;
-    color: #111;
+    color: #333;
     text-transform: uppercase;
-    border-bottom: 3px solid #e8a020;
+    border-bottom: 3px solid #ffad39;
     padding-bottom: 0.4rem;
     /* line-height: 1; */
   }
@@ -459,7 +460,12 @@ footer {
     gap: 2rem;
   }
 
+  .about-text h2 {
+    text-align: center;
+  }
+
   .about-img {
-    width: 160px;
+    width: 200px;
+    align-items: center;
   }
 }
