@@ -1,0 +1,3 @@
+# Ignore all .md files except one: Use a negative pattern. For example, to ignore all but README.md
+*.md
+!README.md
