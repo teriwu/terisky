@@ -8,6 +8,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* LOGO */
 .logo {
   font-family: "Frankfurter", sans-serif;
   display: flex;
@@ -15,6 +16,11 @@
   gap: 0.5rem;
   letter-spacing: 0.1rem;
   color: #333;
+}
+
+.logo-link {
+  text-decoration: none; /* removes default link styling */
+  color: inherit; /* keeps existing #333 color */
 }
 
 body {
