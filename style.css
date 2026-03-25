@@ -377,6 +377,16 @@ footer {
   padding: 2rem;
 }
 
+.emote {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.tiny-text {
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
 
