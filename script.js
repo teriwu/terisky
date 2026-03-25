@@ -14,6 +14,15 @@ function toggleMenu() {
   const isOpen = sidebar.classList.toggle("open");
   hamburger.classList.toggle("open", isOpen);
   overlay.classList.toggle("visible", isOpen);
+
+  // Reset and replay animation on each open
+  if (isOpen) {
+    document.querySelectorAll(".sidebar ul li").forEach(li => {
+      li.style.animation = "none";
+      li.offsetHeight; // force reflow
+      li.style.animation = "";
+    });
+  }
 }
 
 function closeMenu() {
