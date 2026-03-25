@@ -225,6 +225,14 @@ body {
   cursor: zoom-in;
 }
 
+.lightbox-caption {
+  position: absolute;
+  bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 /* CONTACT */
 .contact { background: white; padding: 4rem 2rem; text-align: center; }
 .contact h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
@@ -318,30 +326,6 @@ footer {
   display: flex;
 }
 
-/* Disable mouse interaction */
-/* img {
-  pointer-events: none;
-  user-select: none;
-} */
-
-/* .copyright-popup {
-  position: fixed;
-  background: #2c3e50;
-  color: white;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s;
-  z-index: 999;
-  white-space: nowrap;
-}
-
-.copyright-popup.visible {
-  opacity: 1;
-} */
-
 .about-section {
   padding: 4rem 2rem;
   /* background: white; */
@@ -359,11 +343,15 @@ footer {
   width: 420px;
   flex-shrink: 0;
   border-radius: 10px;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
 }
 
 .about-text h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
 }
 
 .about-text p {
@@ -371,7 +359,15 @@ footer {
   line-height: 1.7;
   color: #666;
   margin-bottom: 0.8rem;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
 }
+
+.about-img          { animation-delay: 0.1s; }
+.about-text h2      { animation-delay: 0.2s; }
+.about-text p:nth-of-type(1) { animation-delay: 0.3s; }
+.about-text p:nth-of-type(2) { animation-delay: 0.4s; }
+.about-text p:nth-of-type(3) { animation-delay: 0.6s; }
 
 .ko-fi {
   padding: 2rem;
@@ -461,6 +457,10 @@ footer {
   .about-img {
     width: 200px;
     align-items: center;
+  }
+
+  .lightbox-caption {
+    bottom: 100px;
   }
 }
 
