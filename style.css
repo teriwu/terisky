@@ -4,7 +4,6 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  /* font-display: optional; */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -28,6 +27,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   color: #333;
   background: #f5f5f5;
+  animation: fadeIn 3s ease forwards;
 }
 
 /* ── MOBILE TOPBAR (hidden on desktop) ── */
@@ -473,6 +473,7 @@ footer {
   }
 }
 
+/* Fade animations for pages and masonry items */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -482,4 +483,10 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Fade in animation for entire website due to FOUT */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
