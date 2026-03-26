@@ -290,6 +290,7 @@ footer {
   flex-direction: column;
   gap: 5px;
   padding: 0.4rem;
+  animation: fadeIn 2s ease forwards;
 }
 .hamburger span {
   display: block;
@@ -395,6 +396,10 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
+
+  body {
+    animation: fadeIn 2s ease forwards;
+  }
 
   /* Show the top bar */
   .mobile-topbar {
