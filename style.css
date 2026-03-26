@@ -453,6 +453,10 @@ footer {
     margin-bottom: 0.4rem;
   }
 
+  .masonry-item:nth-of-type(even) {
+    animation-delay: 0s;
+  }
+
   /* Stack vertically on mobile */
   .about-inner {
     flex-direction: column;
