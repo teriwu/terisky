@@ -180,6 +180,14 @@ body {
   opacity: 0.8;
 }
 
+.masonry-item:nth-of-type(odd) {
+  animation-delay: 0.3s;
+}
+
+.masonry-item:nth-of-type(even) {
+  animation-delay: 0.15s;
+}
+
 /* LIGHTBOX OVERLAY */
 .lightbox {
   display: none;
