@@ -34,7 +34,6 @@ body {
 /* ── MOBILE TOPBAR (hidden on desktop) ── */
 .mobile-topbar {
   display: none;
-  background: #faf8f2;
 }
 
 /* LAYOUT */
